@@ -1,6 +1,6 @@
 # diag API
 
-`POST https://cc-session-notes.vercel.app/api/diag`
+`POST https://cc-runtime-notes.vercel.app/api/diag`
 
 Records a runtime diagnostic from a Claude Code session so differences between runtimes
 can be compared against a baseline rather than guessed at.

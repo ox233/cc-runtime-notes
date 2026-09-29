@@ -1,4 +1,4 @@
-# cc-session-notes
+# cc-runtime-notes
 
 Notes on the Claude Code session runtime, and the diagnostics collector.
 
@@ -19,12 +19,12 @@ service you call with `curl`.
 | [docs/diag.md](docs/diag.md) | `POST /api/diag` reference — auth, body, status codes |
 | [docs/environment.md](docs/environment.md) | What each runtime puts in the environment |
 
-Hosted copies: <https://cc-session-notes.vercel.app>
+Hosted copies: <https://cc-runtime-notes.vercel.app>
 
 ## Filing a diagnostic
 
 ```bash
-curl -s -X POST https://cc-session-notes.vercel.app/api/diag \
+curl -s -X POST https://cc-runtime-notes.vercel.app/api/diag \
   -H 'content-type: application/json' \
   -H "authorization: Bearer $CC_SESSION_TOKEN" \
   -d '{"runtime":"claude-code/web"}'
