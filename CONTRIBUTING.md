@@ -10,7 +10,7 @@ diagnostic from the affected session:
 curl -s -X POST https://cc-runtime-notes.vercel.app/api/diag \
   -H 'content-type: application/json' \
   -H "authorization: Bearer $CC_SESSION_TOKEN" \
-  -d '{"runtime":"claude-code/web"}'
+  -d '{"runtime":"cowork"}'
 ```
 
 Include the `diag_id`, the HTTP status, and the runtime if you know it.

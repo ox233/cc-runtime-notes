@@ -25,7 +25,7 @@ and a SHA-256 digest — enough to tell which credential class arrived, not enou
 
 | field | type | meaning |
 | --- | --- | --- |
-| `runtime` | string | `claude-code/web`, `claude-code/desktop` or `claude-code/cli`. Defaults to `claude-code/unknown`. |
+| `runtime` | string | `cowork`, `claude-code/web`, `claude-code/desktop` or `claude-code/cli`. Defaults to `unknown`. |
 
 ## Response
 
@@ -33,7 +33,7 @@ and a SHA-256 digest — enough to tell which credential class arrived, not enou
 {
   "diag_id": "cd_1b8e12b7",
   "session": "cs_c5bbce",
-  "runtime": "claude-code/web",
+  "runtime": "cowork",
   "comparable": 34,
   "server_time": "2026-10-05T18:02:20.055Z"
 }

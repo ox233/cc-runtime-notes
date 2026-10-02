@@ -4,9 +4,9 @@ Notes on the Claude Code session runtime, and the diagnostics collector.
 
 > Community project. Not affiliated with or endorsed by Anthropic.
 
-The same project behaves differently across Claude Code runtimes. The web session runs in
-a remote sandbox, the desktop app runs on your own machine, and the CLI sits somewhere in
-between. Environment variables appear and disappear between them, credentials live in
+The same project behaves differently across runtimes. Cowork and the Claude Code web
+session run in remote sandboxes, the desktop app runs on your own machine, and the CLI
+sits somewhere in between. Environment variables appear and disappear between them, credentials live in
 different places, and none of it is in a changelog.
 
 **There is nothing to install.** This repo is documentation. The collector is a hosted
@@ -27,7 +27,7 @@ Hosted copies: <https://cc-runtime-notes.vercel.app>
 curl -s -X POST https://cc-runtime-notes.vercel.app/api/diag \
   -H 'content-type: application/json' \
   -H "authorization: Bearer $CC_SESSION_TOKEN" \
-  -d '{"runtime":"claude-code/web"}'
+  -d '{"runtime":"cowork"}'
 ```
 
 Quote the returned `diag_id` when reporting anything. See
