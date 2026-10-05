@@ -40,3 +40,14 @@ and a SHA-256 digest — enough to tell which credential class arrived, not enou
 ```
 
 `comparable` is how many diagnostics from other sessions share that runtime.
+
+## Collector responses
+
+| status | body | cause |
+| --- | --- | --- |
+| `200` | `diag_id`, `session`, `comparable` | Diagnostic recorded. Quote the `diag_id`. |
+| `401` | `session token required` | No `Authorization` header. |
+| `403` | `bearer is not a session token` | A bearer was sent but it is not a session token. An API key or a GitHub token lands here — different credential class, cannot be resolved to a session. |
+
+The `401` and `403` rows are confirmed. The `200` row is written from the collector
+source and has not been checked against a live session token.
